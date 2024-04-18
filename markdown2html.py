@@ -16,14 +16,14 @@ Otherwise, print nothing and exit 0
 """
 
 if len(sys.argv) < 3:
-    print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
-    sys.exit(1)
+    sys.stderr.write("Usage: ./markdown2html.py README.md README.html\n")
+    exit(1)
 
 markdown_file = sys.argv[1]
 html_file = sys.argv[2]
 
 if not os.path.exists(markdown_file):
-    print("Missing {}".format(markdown_file), file=sys.stderr)
-    sys.exit(1)
+    sys.stderr.write("Missing {markdown_file}\n", markdown_file=markdown_file)
+    exit(1)
 
-sys.exit(0)
+exit(0)
