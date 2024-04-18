@@ -17,15 +17,22 @@ Otherwise, print nothing and exit 0
 import sys
 import os
 
-if len(sys.argv) < 3:
-    sys.stderr.write("Usage: ./markdown2html.py README.md README.html\n")
-    exit(1)
 
-markdown_file = sys.argv[1]
-html_file = sys.argv[2]
+def main():
 
-if not os.path.exists(markdown_file):
-    sys.stderr.write(f"Missing {markdown_file}\n")
-    exit(1)
+    if len(sys.argv) < 3:
+        sys.stderr.write("Usage: ./markdown2html.py README.md README.html\n")
+        exit(1)
 
-exit(0)
+    markdown_file = sys.argv[1]
+    html_file = sys.argv[2]
+
+    if not os.path.exists(markdown_file):
+        sys.stderr.write(f"Missing {markdown_file}\n")
+        exit(1)
+
+    exit(0)
+
+
+if __name__ == "__main__":
+    main()
