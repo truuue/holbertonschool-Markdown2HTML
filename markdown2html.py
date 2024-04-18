@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-import os
-
 """
 Write a script markdown2html.py that takes an argument 2 strings:
 
@@ -16,6 +13,9 @@ If the Markdown file doesn’t exist:
 print in STDER Missing <filename> and exit 1
 Otherwise, print nothing and exit 0
 """
+
+import sys
+import os
 
 if len(sys.argv) < 3:
     sys.stderr.write("Usage: ./markdown2html.py README.md README.html\n")
